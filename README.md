@@ -73,3 +73,17 @@ The dashboard transforms the optimized database views into interactive data asse
 * **Database Engine:** PostgreSQL
 * **Visualization BI Tool:** Microsoft Power BI Desktop
 * **Version Control:** Git & GitHub Desktop
+
+## DataSource & Replication
+
+The raw financial dataset tracking municipal repairs and maintenance configurations is sourced directly from the official public repository or data portal.
+
+* **Data Source Link:** [https://municipaldata.treasury.gov.za/docs]
+* **Target File:** Name of the raw dataset file (e.g., `repairs_maintenance_facts_v2.csv`)
+
+### How to use this project locally:
+1. Download the raw CSV dataset from the link provided above.
+2. Execute `1_create_annual_tables.sql` and `2_create_monthly_tables.sql` inside your local PostgreSQL instance to build and populate the structured schema.
+3. Run `3_verify_data_integrity.sql` to run the data checks.
+4. Run `4_create_dashboard_view.sql` to generate the presentation views before launching the Power BI report.
+
